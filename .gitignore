@@ -1,0 +1,7 @@
+.next/
+out/
+node_modules/
+.next.js/
+*.log
+.DS_Store
+.next-cache/
