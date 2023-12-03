@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const RoleChanges = () => {
-  return (
-    <div>RoleChanges</div>
-  )
-}
+  return <div>RoleChanges</div>;
+};
 
-export default RoleChanges
+export default RoleChanges;

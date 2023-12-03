@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ScrollDepth = () => {
-  return (
-    <div>ScrollDepth</div>
-  )
-}
+  return <div>ScrollDepth</div>;
+};
 
-export default ScrollDepth
+export default ScrollDepth;

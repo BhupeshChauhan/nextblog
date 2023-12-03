@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ConfigureCrawlingRules = () => {
-  return (
-    <div>ConfigureCrawlingRules</div>
-  )
-}
+  return <div>ConfigureCrawlingRules</div>;
+};
 
-export default ConfigureCrawlingRules
+export default ConfigureCrawlingRules;

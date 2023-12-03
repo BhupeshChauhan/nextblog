@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DateFormat = () => {
-  return (
-    <div>DateFormat</div>
-  )
-}
+  return <div>DateFormat</div>;
+};
 
-export default DateFormat
+export default DateFormat;

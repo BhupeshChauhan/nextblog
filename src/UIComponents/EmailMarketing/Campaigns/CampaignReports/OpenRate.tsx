@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const OpenRate = () => {
-  return (
-    <div>OpenRate</div>
-  )
-}
+  return <div>OpenRate</div>;
+};
 
-export default OpenRate
+export default OpenRate;

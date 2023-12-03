@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const UniqueVisitors = () => {
-  return (
-    <div>UniqueVisitors</div>
-  )
-}
+  return <div>UniqueVisitors</div>;
+};
 
-export default UniqueVisitors
+export default UniqueVisitors;

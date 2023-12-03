@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const IncludeExcludePages = () => {
-  return (
-    <div>IncludeExcludePages</div>
-  )
-}
+  return <div>IncludeExcludePages</div>;
+};
 
-export default IncludeExcludePages
+export default IncludeExcludePages;

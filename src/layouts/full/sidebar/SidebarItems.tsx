@@ -1,11 +1,11 @@
-import React from 'react';
-import Menuitems from './MenuItems';
-import { useRouter } from 'next/router';
-import { Box, List } from '@mui/material';
-import NavItem from './NavItem';
-import NavGroup from './NavGroup/NavGroup';
+import React from "react";
+import Menuitems from "./MenuItems";
+import { useRouter } from "next/router";
+import { Box, List } from "@mui/material";
+import NavItem from "./NavItem";
+import NavGroup from "./NavGroup/NavGroup";
 
-const SidebarItems = ({toggleMobileSidebar}: any) => {
+const SidebarItems = ({ toggleMobileSidebar }: any) => {
   const { pathname } = useRouter();
   const pathDirect = pathname;
 
@@ -21,7 +21,12 @@ const SidebarItems = ({toggleMobileSidebar}: any) => {
             /* eslint no-else-return: "off" */
           } else {
             return (
-              <NavItem item={item} key={item.id} pathDirect={pathDirect}  onClick={toggleMobileSidebar}/>
+              <NavItem
+                item={item}
+                key={item.id}
+                pathDirect={pathDirect}
+                onClick={toggleMobileSidebar}
+              />
             );
           }
         })}

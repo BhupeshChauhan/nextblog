@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TopPages = () => {
-  return (
-    <div>TopPages</div>
-  )
-}
+  return <div>TopPages</div>;
+};
 
-export default TopPages
+export default TopPages;

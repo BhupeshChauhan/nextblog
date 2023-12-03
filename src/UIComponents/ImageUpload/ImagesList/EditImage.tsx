@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const EditImage = () => {
-  return (
-    <div>EditImage</div>
-  )
-}
+  return <div>EditImage</div>;
+};
 
-export default EditImage
+export default EditImage;

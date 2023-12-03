@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AccountDeactivation = () => {
-  return (
-    <div>AccountDeactivation</div>
-  )
-}
+  return <div>AccountDeactivation</div>;
+};
 
-export default AccountDeactivation
+export default AccountDeactivation;

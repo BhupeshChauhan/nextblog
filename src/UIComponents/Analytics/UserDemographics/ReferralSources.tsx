@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ReferralSources = () => {
-  return (
-    <div>ReferralSources</div>
-  )
-}
+  return <div>ReferralSources</div>;
+};
 
-export default ReferralSources
+export default ReferralSources;

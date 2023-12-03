@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SubscriberInteractions = () => {
-  return (
-    <div>SubscriberInteractions</div>
-  )
-}
+  return <div>SubscriberInteractions</div>;
+};
 
-export default SubscriberInteractions
+export default SubscriberInteractions;

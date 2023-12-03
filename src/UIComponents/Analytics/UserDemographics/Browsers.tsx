@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Browsers = () => {
-  return (
-    <div>Browsers</div>
-  )
-}
+  return <div>Browsers</div>;
+};
 
-export default Browsers
+export default Browsers;

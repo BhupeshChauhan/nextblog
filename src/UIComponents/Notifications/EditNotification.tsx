@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const EditNotification = () => {
-  return (
-    <div>EditNotification</div>
-  )
-}
+  return <div>EditNotification</div>;
+};
 
-export default EditNotification
+export default EditNotification;

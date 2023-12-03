@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TopReferrers = () => {
-  return (
-    <div>TopReferrers</div>
-  )
-}
+  return <div>TopReferrers</div>;
+};
 
-export default TopReferrers
+export default TopReferrers;

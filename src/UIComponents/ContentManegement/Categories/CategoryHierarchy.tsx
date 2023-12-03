@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const CategoryHierarchy = () => {
-  return (
-    <div>CategoryHierarchy</div>
-  )
-}
+  return <div>CategoryHierarchy</div>;
+};
 
-export default CategoryHierarchy
+export default CategoryHierarchy;

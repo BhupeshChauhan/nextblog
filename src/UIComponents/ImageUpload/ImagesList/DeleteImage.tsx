@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DeleteImage = () => {
-  return (
-    <div>DeleteImage</div>
-  )
-}
+  return <div>DeleteImage</div>;
+};
 
-export default DeleteImage
+export default DeleteImage;

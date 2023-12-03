@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const FontPreferences = () => {
-  return (
-    <div>FontPreferences</div>
-  )
-}
+  return <div>FontPreferences</div>;
+};
 
-export default FontPreferences
+export default FontPreferences;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const OrganicTraffic = () => {
-  return (
-    <div>OrganicTraffic</div>
-  )
-}
+  return <div>OrganicTraffic</div>;
+};
 
-export default OrganicTraffic
+export default OrganicTraffic;

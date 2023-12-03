@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const GeographicLocation = () => {
-  return (
-    <div>GeographicLocation</div>
-  )
-}
+  return <div>GeographicLocation</div>;
+};
 
-export default GeographicLocation
+export default GeographicLocation;

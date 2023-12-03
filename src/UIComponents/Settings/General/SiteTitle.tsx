@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SiteTitle = () => {
-  return (
-    <div>SiteTitle</div>
-  )
-}
+  return <div>SiteTitle</div>;
+};
 
-export default SiteTitle
+export default SiteTitle;

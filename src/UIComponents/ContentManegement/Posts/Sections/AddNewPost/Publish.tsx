@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Publish = () => {
-  return (
-    <div>Publish</div>
-  )
-}
+  return <div>Publish</div>;
+};
 
-export default Publish
+export default Publish;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DeleteCampaign = () => {
-  return (
-    <div>DeleteCampaign</div>
-  )
-}
+  return <div>DeleteCampaign</div>;
+};
 
-export default DeleteCampaign
+export default DeleteCampaign;

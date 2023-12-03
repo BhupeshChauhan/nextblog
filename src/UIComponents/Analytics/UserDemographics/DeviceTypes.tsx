@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DeviceTypes = () => {
-  return (
-    <div>DeviceTypes</div>
-  )
-}
+  return <div>DeviceTypes</div>;
+};
 
-export default DeviceTypes
+export default DeviceTypes;

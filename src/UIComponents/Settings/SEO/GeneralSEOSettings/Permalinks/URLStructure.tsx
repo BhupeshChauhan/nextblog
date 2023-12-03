@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const URLStructure = () => {
-  return (
-    <div>URLStructure</div>
-  )
-}
+  return <div>URLStructure</div>;
+};
 
-export default URLStructure
+export default URLStructure;

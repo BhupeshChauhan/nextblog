@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const EditTag = () => {
-  return (
-    <div>EditTag</div>
-  )
-}
+  return <div>EditTag</div>;
+};
 
-export default EditTag
+export default EditTag;

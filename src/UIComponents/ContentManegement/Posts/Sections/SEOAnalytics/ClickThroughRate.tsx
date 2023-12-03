@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ClickThroughRate = () => {
-  return (
-    <div>ClickThroughRate</div>
-  )
-}
+  return <div>ClickThroughRate</div>;
+};
 
-export default ClickThroughRate
+export default ClickThroughRate;

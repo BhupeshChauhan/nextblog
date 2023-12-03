@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TitleTag = () => {
-  return (
-    <div>TitleTag</div>
-  )
-}
+  return <div>TitleTag</div>;
+};
 
-export default TitleTag
+export default TitleTag;

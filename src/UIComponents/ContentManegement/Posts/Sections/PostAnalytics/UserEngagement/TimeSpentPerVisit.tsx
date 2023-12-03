@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TimeSpentPerVisit = () => {
-  return (
-    <div>TimeSpentPerVisit</div>
-  )
-}
+  return <div>TimeSpentPerVisit</div>;
+};
 
-export default TimeSpentPerVisit
+export default TimeSpentPerVisit;

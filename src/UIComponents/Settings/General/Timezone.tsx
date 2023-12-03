@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Timezone = () => {
-  return (
-    <div>Timezone</div>
-  )
-}
+  return <div>Timezone</div>;
+};
 
-export default Timezone
+export default Timezone;

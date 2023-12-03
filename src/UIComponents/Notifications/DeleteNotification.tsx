@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DeleteNotification = () => {
-  return (
-    <div>DeleteNotification</div>
-  )
-}
+  return <div>DeleteNotification</div>;
+};
 
-export default DeleteNotification
+export default DeleteNotification;

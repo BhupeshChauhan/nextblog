@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Shares = () => {
-  return (
-    <div>Shares</div>
-  )
-}
+  return <div>Shares</div>;
+};
 
-export default Shares
+export default Shares;

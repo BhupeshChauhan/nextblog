@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const CommentsList = () => {
-  return (
-    <div>CommentsList</div>
-  )
-}
+  return <div>CommentsList</div>;
+};
 
-export default CommentsList
+export default CommentsList;

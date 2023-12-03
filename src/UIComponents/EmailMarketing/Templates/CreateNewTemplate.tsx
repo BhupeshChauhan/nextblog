@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const CreateNewTemplate = () => {
-  return (
-    <div>CreateNewTemplate</div>
-  )
-}
+  return <div>CreateNewTemplate</div>;
+};
 
-export default CreateNewTemplate
+export default CreateNewTemplate;

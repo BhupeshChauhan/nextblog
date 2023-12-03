@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TotalVisits = () => {
-  return (
-    <div>TotalVisits</div>
-  )
-}
+  return <div>TotalVisits</div>;
+};
 
-export default TotalVisits
+export default TotalVisits;

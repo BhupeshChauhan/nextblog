@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const PostsList = () => {
-  return (
-    <div>PostsList</div>
-  )
-}
+  return <div>PostsList</div>;
+};
 
-export default PostsList
+export default PostsList;

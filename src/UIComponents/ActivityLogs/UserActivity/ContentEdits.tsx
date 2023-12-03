@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ContentEdits = () => {
-  return (
-    <div>ContentEdits</div>
-  )
-}
+  return <div>ContentEdits</div>;
+};
 
-export default ContentEdits
+export default ContentEdits;

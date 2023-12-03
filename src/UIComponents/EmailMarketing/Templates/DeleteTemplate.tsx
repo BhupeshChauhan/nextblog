@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DeleteTemplate = () => {
-  return (
-    <div>DeleteTemplate</div>
-  )
-}
+  return <div>DeleteTemplate</div>;
+};
 
-export default DeleteTemplate
+export default DeleteTemplate;

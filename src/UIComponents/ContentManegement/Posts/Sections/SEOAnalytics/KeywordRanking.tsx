@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const KeywordRanking = () => {
-  return (
-    <div>KeywordRanking</div>
-  )
-}
+  return <div>KeywordRanking</div>;
+};
 
-export default KeywordRanking
+export default KeywordRanking;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const PostStatus = () => {
-  return (
-    <div>PostStatus</div>
-  )
-}
+  return <div>PostStatus</div>;
+};
 
-export default PostStatus
+export default PostStatus;

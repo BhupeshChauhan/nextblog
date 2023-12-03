@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const EditSubscriber = () => {
-  return (
-    <div>EditSubscriber</div>
-  )
-}
+  return <div>EditSubscriber</div>;
+};
 
-export default EditSubscriber
+export default EditSubscriber;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ErrorsAndWarnings = () => {
-  return (
-    <div>ErrorsAndWarnings</div>
-  )
-}
+  return <div>ErrorsAndWarnings</div>;
+};
 
-export default ErrorsAndWarnings
+export default ErrorsAndWarnings;

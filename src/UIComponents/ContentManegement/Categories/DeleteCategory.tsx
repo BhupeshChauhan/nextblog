@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DeleteCategory = () => {
-  return (
-    <div>DeleteCategory</div>
-  )
-}
+  return <div>DeleteCategory</div>;
+};
 
-export default DeleteCategory
+export default DeleteCategory;

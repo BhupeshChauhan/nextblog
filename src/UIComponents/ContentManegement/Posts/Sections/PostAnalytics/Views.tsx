@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Views = () => {
-  return (
-    <div>Views</div>
-  )
-}
+  return <div>Views</div>;
+};
 
-export default Views
+export default Views;

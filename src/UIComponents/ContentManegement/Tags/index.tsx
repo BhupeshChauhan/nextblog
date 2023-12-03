@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TagsList = () => {
-  return (
-    <div>TagsList</div>
-  )
-}
+  return <div>TagsList</div>;
+};
 
-export default TagsList
+export default TagsList;

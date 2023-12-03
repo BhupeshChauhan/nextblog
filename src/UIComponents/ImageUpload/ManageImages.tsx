@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ManageImages = () => {
-  return (
-    <div>ManageImages</div>
-  )
-}
+  return <div>ManageImages</div>;
+};
 
-export default ManageImages
+export default ManageImages;

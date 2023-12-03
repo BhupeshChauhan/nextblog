@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SecurityAlerts = () => {
-  return (
-    <div>SecurityAlerts</div>
-  )
-}
+  return <div>SecurityAlerts</div>;
+};
 
-export default SecurityAlerts
+export default SecurityAlerts;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const CanonicalURL = () => {
-  return (
-    <div>CanonicalURL</div>
-  )
-}
+  return <div>CanonicalURL</div>;
+};
 
-export default CanonicalURL
+export default CanonicalURL;

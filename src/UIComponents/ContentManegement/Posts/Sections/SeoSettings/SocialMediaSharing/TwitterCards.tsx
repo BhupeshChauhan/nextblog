@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TwitterCards = () => {
-  return (
-    <div>TwitterCards</div>
-  )
-}
+  return <div>TwitterCards</div>;
+};
 
-export default TwitterCards
+export default TwitterCards;

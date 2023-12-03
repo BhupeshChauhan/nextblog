@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const EditCampaign = () => {
-  return (
-    <div>EditCampaign</div>
-  )
-}
+  return <div>EditCampaign</div>;
+};
 
-export default EditCampaign
+export default EditCampaign;

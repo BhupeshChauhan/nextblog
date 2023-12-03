@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AddNewTag = () => {
-  return (
-    <div>AddNewTag</div>
-  )
-}
+  return <div>AddNewTag</div>;
+};
 
-export default AddNewTag
+export default AddNewTag;

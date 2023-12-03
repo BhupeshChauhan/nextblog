@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SearchEngineVisibility = () => {
-  return (
-    <div>SearchEngineVisibility</div>
-  )
-}
+  return <div>SearchEngineVisibility</div>;
+};
 
-export default SearchEngineVisibility
+export default SearchEngineVisibility;

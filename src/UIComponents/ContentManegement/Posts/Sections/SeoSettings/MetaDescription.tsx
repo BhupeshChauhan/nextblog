@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const MetaDescription = () => {
-  return (
-    <div>MetaDescription</div>
-  )
-}
+  return <div>MetaDescription</div>;
+};
 
-export default MetaDescription
+export default MetaDescription;

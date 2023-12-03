@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AuthenticationChanges = () => {
-  return (
-    <div>AuthenticationChanges</div>
-  )
-}
+  return <div>AuthenticationChanges</div>;
+};
 
-export default AuthenticationChanges
+export default AuthenticationChanges;

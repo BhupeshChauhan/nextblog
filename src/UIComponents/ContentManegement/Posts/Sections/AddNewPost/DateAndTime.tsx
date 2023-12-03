@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DateAndTime = () => {
-  return (
-    <div>DateAndTime</div>
-  )
-}
+  return <div>DateAndTime</div>;
+};
 
-export default DateAndTime
+export default DateAndTime;

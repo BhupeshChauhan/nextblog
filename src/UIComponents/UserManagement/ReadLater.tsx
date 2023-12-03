@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ReadLater = () => {
-  return (
-    <div>ReadLater</div>
-  )
-}
+  return <div>ReadLater</div>;
+};
 
-export default ReadLater
+export default ReadLater;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Keywords = () => {
-  return (
-    <div>Keywords</div>
-  )
-}
+  return <div>Keywords</div>;
+};
 
-export default Keywords
+export default Keywords;

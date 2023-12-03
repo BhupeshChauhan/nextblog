@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SendTestPushNotification = () => {
-  return (
-    <div>SendTestPushNotification</div>
-  )
-}
+  return <div>SendTestPushNotification</div>;
+};
 
-export default SendTestPushNotification
+export default SendTestPushNotification;

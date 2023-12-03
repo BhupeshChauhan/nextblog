@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ThemeSelection = () => {
-  return (
-    <div>ThemeSelection</div>
-  )
-}
+  return <div>ThemeSelection</div>;
+};
 
-export default ThemeSelection
+export default ThemeSelection;

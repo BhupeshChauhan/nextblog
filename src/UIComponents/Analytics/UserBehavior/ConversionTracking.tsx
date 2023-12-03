@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ConversionTracking = () => {
-  return (
-    <div>ConversionTracking</div>
-  )
-}
+  return <div>ConversionTracking</div>;
+};
 
-export default ConversionTracking
+export default ConversionTracking;

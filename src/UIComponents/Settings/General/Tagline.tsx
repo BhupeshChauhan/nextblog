@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Tagline = () => {
-  return (
-    <div>Tagline</div>
-  )
-}
+  return <div>Tagline</div>;
+};
 
-export default Tagline
+export default Tagline;

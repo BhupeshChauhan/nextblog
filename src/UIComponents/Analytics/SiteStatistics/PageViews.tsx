@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const PageViews = () => {
-  return (
-    <div>PageViews</div>
-  )
-}
+  return <div>PageViews</div>;
+};
 
-export default PageViews
+export default PageViews;

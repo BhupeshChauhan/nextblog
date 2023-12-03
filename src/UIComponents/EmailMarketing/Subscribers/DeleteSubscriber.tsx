@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DeleteSubscriber = () => {
-  return (
-    <div>DeleteSubscriber</div>
-  )
-}
+  return <div>DeleteSubscriber</div>;
+};
 
-export default DeleteSubscriber
+export default DeleteSubscriber;

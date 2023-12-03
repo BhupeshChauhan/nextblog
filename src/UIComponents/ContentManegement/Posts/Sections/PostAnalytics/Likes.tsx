@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Likes = () => {
-  return (
-    <div>Likes</div>
-  )
-}
+  return <div>Likes</div>;
+};
 
-export default Likes
+export default Likes;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const FeaturedImage = () => {
-  return (
-    <div>FeaturedImage</div>
-  )
-}
+  return <div>FeaturedImage</div>;
+};
 
-export default FeaturedImage
+export default FeaturedImage;
