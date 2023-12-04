@@ -6,7 +6,7 @@ import BlankLayout from "../../../src/layouts/blank/BlankLayout";
 // components
 import PageContainer from "../../../src/components/container/PageContainer";
 import Logo from "../../../src/layouts/full/shared/logo/Logo";
-import AuthLogin from "../auth/AuthLogin";
+import Login from "../../../src/UIComponents/Authentication/Login";
 
 const Login2 = () => {
   return (
@@ -49,7 +49,7 @@ const Login2 = () => {
               <Box display="flex" alignItems="center" justifyContent="center">
                 <Logo />
               </Box>
-              <AuthLogin
+              <Login
                 subtext={
                   <Typography
                     variant="subtitle1"

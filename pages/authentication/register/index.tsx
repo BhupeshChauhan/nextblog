@@ -3,8 +3,8 @@ import { Grid, Box, Card, Typography, Stack } from "@mui/material";
 import Link from "next/link";
 import PageContainer from "../../../src/components/container/PageContainer";
 import Logo from "../../../src/layouts/full/shared/logo/Logo";
-import AuthRegister from "../auth/AuthRegister";
 import BlankLayout from "../../../src/layouts/blank/BlankLayout";
+import Register from "../../../src/UIComponents/Authentication/Register";
 
 const Register2 = () => (
   <PageContainer title="Register" description="this is Register page">
@@ -46,7 +46,7 @@ const Register2 = () => (
             <Box display="flex" alignItems="center" justifyContent="center">
               <Logo />
             </Box>
-            <AuthRegister
+            <Register
               subtext={
                 <Typography
                   variant="subtitle1"
