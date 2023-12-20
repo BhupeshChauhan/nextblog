@@ -30,11 +30,12 @@ const FormComponent: React.FC<IFormComponent> = ({
   });
 
   const handleClear = () => {
-    onClear();
+    onClear && onClear();
     formik.resetForm();
   };
+
   const handleClose = () => {
-    onClose();
+    onClose && onClose();
     formik.resetForm();
   };
   return (
@@ -76,13 +77,7 @@ const FormComponent: React.FC<IFormComponent> = ({
             />
           </Grid>
         ))}
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          lg={12}
-          xl={12}
-        >
+        <Grid item xs={12} sm={12} lg={12} xl={12}>
           {isClear ? (
             <Button
               color="secondary"
