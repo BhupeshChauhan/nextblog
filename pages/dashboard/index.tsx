@@ -9,7 +9,6 @@ import ProductPerformance from "../../src/components/dashboard/ProductPerformanc
 import Blog from "../../src/components/dashboard/Blog";
 import Layout from "../../src/layouts";
 
-
 export default function Dashboard() {
   return (
     <PageContainer title="Dashboard" description="this is Dashboard">

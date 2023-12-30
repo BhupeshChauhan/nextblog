@@ -8,10 +8,7 @@ interface ItemType {
   onSidebarClose: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
-const Sidebar = ({
-  isSidebarOpen,
-  onSidebarClose,
-}: ItemType) => {
+const Sidebar = ({ isSidebarOpen, onSidebarClose }: ItemType) => {
   const sidebarWidth = "270px";
 
   return (

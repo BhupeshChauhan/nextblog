@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const OpenGraphTags = () => {
-  return (
-    <div>OpenGraphTags</div>
-  )
-}
+  return <div>OpenGraphTags</div>;
+};
 
-export default OpenGraphTags
+export default OpenGraphTags;
