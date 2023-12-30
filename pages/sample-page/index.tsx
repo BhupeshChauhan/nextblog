@@ -2,7 +2,7 @@ import type { ReactElement } from "react";
 import { Typography } from "@mui/material";
 import PageContainer from "../../src/components/container/PageContainer";
 import DashboardCard from "../../src/components/shared/DashboardCard";
-import FullLayout from "../../src/layouts";
+import Layout from "../../src/layouts";
 
 const SamplePage = () => {
   return (
