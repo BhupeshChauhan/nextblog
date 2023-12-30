@@ -2,7 +2,7 @@ import type { ReactElement } from "react";
 import { Typography } from "@mui/material";
 import PageContainer from "../../../src/components/container/PageContainer";
 import DashboardCard from "../../../src/components/shared/DashboardCard";
-import FullLayout from "../../../src/layouts/full/FullLayout";
+import Layout from "../../../src/layouts";
 
 const CategoriesEdit = () => {
   return (
@@ -16,5 +16,5 @@ const CategoriesEdit = () => {
 
 export default CategoriesEdit;
 CategoriesEdit.getLayout = function getLayout(page: ReactElement) {
-  return <FullLayout>{page}</FullLayout>;
+  return <Layout type="Full">{page}</Layout>;
 };

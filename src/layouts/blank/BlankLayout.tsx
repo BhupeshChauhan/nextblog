@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import AuthProvider from "../../utils/AuthProvider";
 
 interface BlankLayoutProps {
   children: React.ReactNode;

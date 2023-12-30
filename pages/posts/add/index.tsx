@@ -1,7 +1,7 @@
 import { useEffect, type ReactElement } from "react";
 import { Button } from "@mui/material";
 import PageContainer from "../../../src/components/container/PageContainer";
-import FullLayout from "../../../src/layouts/full/FullLayout";
+import Layout from "../../../src/layouts";
 import CustomDynamicForm from "../../../src/components/CustomDynamicForm";
 import Link from "next/link";
 
@@ -284,5 +284,5 @@ const PostsAdd = () => {
 
 export default PostsAdd;
 PostsAdd.getLayout = function getLayout(page: ReactElement) {
-  return <FullLayout>{page}</FullLayout>;
+  return <Layout type="Full">{page}</Layout>;
 };

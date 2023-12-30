@@ -3,8 +3,8 @@ import { Grid, Box, Card, Typography, Stack } from "@mui/material";
 import Link from "next/link";
 import PageContainer from "../../../src/components/container/PageContainer";
 import Logo from "../../../src/layouts/full/shared/logo/Logo";
-import BlankLayout from "../../../src/layouts/blank/BlankLayout";
 import Register from "../../../src/UIComponents/Authentication/Register";
+import Layout from "../../../src/layouts";
 
 const Register2 = () => (
   <PageContainer title="Register" description="this is Register page">
@@ -95,5 +95,5 @@ const Register2 = () => (
 export default Register2;
 
 Register2.getLayout = function getLayout(page: ReactElement) {
-  return <BlankLayout>{page}</BlankLayout>;
+  return <Layout type="Blank">{page}</Layout>;
 };

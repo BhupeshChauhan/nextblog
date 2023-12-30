@@ -55,12 +55,6 @@ const Header = ({ toggleMobileSidebar }: ItemType) => {
           color="inherit"
           aria-label="menu"
           onClick={toggleMobileSidebar}
-          sx={{
-            display: {
-              lg: "none",
-              xs: "inline",
-            },
-          }}
         >
           <IconMenu width="20" height="20" />
         </IconButton>

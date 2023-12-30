@@ -83,11 +83,11 @@ const Profile = () => {
           </ListItemIcon>
           <ListItemText>My Account</ListItemText>
         </MenuItem>
-        <MenuItem onClick={() => route.replace("/")}>
+        <MenuItem onClick={() => route.replace("/dashboard")}>
           <ListItemIcon>
             <IconMail width={20} />
           </ListItemIcon>
-          <ListItemText>Landing Page</ListItemText>
+          <ListItemText>Dashboard</ListItemText>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>

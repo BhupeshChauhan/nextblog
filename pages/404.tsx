@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { ReactElement } from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import Link from "next/link";

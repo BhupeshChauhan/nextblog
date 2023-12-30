@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
 import PageContainer from "../../../src/components/container/PageContainer";
-import FullLayout from "../../../src/layouts/full/FullLayout";
+import Layout from "../../../src/layouts";
 import CustomDynamicForm from "../../../src/components/CustomDynamicForm";
 import Link from "next/link";
 import { Button } from "@mui/material";
@@ -74,5 +74,5 @@ const TagsAdd = () => {
 
 export default TagsAdd;
 TagsAdd.getLayout = function getLayout(page: ReactElement) {
-  return <FullLayout>{page}</FullLayout>;
+  return <Layout type="Full">{page}</Layout>;
 };

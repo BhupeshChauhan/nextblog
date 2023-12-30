@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import PageContainer from "../../src/components/container/PageContainer";
 import DashboardCard from "../../src/components/shared/DashboardCard";
-import FullLayout from "../../src/layouts/full/FullLayout";
+import Layout from "../../src/layouts";
 
 const Icons = () => {
   return (
@@ -21,5 +21,5 @@ const Icons = () => {
 
 export default Icons;
 Icons.getLayout = function getLayout(page: ReactElement) {
-  return <FullLayout>{page}</FullLayout>;
+  return <Layout type="Full">{page}</Layout>;
 };
