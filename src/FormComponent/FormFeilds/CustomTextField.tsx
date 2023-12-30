@@ -23,8 +23,9 @@ interface IDynamicTextField {
   rows?: any;
   onBlur?: any;
   error?: any;
+  placeholder?: any;
 }
-const DynamicTextField: React.FC<IDynamicTextField> = ({
+const CustomTextField: React.FC<IDynamicTextField> = ({
   id,
   name,
   value,
@@ -46,6 +47,7 @@ const DynamicTextField: React.FC<IDynamicTextField> = ({
   onChange,
   onBlur,
   error,
+  placeholder,
 }) => {
   return (
     <TextField
@@ -70,8 +72,9 @@ const DynamicTextField: React.FC<IDynamicTextField> = ({
       onChange={onChange}
       onBlur={onBlur}
       error={error}
+      placeholder={placeholder}
     />
   );
 };
 
-export default DynamicTextField;
+export default CustomTextField;

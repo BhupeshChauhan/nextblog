@@ -1,22 +1,39 @@
 "use server";
+import CryptoJS from "crypto-js";
 
 import { FilterQuery, SortOrder } from "mongoose";
 
 import { connectToDB } from "../mongoose";
+import User from "../models/user.model";
+import { NextResponse } from "next/server";
 
 export async function createUser(req: any, res: any) {
   try {
     connectToDB();
     const { name, email, password } = await req.body;
 
-    console.log("req", req.body);
-    console.log("name", name);
-    console.log("email", email);
-    console.log("password", password);
+    const encryptedPassword = CryptoJS.AES.encrypt(
+      password,
+      process.env.SECRETKEY || "",
+    ).toString();
 
+    const existingUser = await User.findOne({ email });
+
+    if (existingUser) {
+      return res.status(400).json({ message: "Email already in use" });
+    }
+
+    const newUser = new User({
+      name,
+      email,
+      password: encryptedPassword,
+    });
+
+    await newUser.save();
     return res.status(200).json({ message: "Success ADDED" });
   } catch (error) {
     console.error("Error:", error);
+
     return res.status(500).json({ message: "Internal Server Error" });
   }
 }

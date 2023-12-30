@@ -1,22 +1,21 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
-  id: {
-    type: String,
-    required: true,
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    password: String,
+    image: String,
+    bio: String,
   },
-  username: {
-    type: String,
-    unique: true,
-    required: true,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  image: String,
-  bio: String,
-});
+  { timestamps: true },
+);
 
 const User = mongoose.models?.User || mongoose.model("User", userSchema);
 

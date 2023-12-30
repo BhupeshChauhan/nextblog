@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
-import Link from "next/link";
 
 import CustomTextField from "../../../src/components/forms/theme-elements/CustomTextField";
 import { Stack } from "@mui/system";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import CustomSnackBar from "../../components/CustomSnackBar";
+import { useRouter } from "next/router";
 
 interface registerType {
   title?: string;
@@ -14,17 +15,35 @@ interface registerType {
 }
 
 const Register = ({ title, subtitle, subtext }: registerType) => {
+  const router = useRouter();
+  const [alertMessage, setAlertMessage] = useState("");
+  const [severity, setSeverity] = useState("");
+  const [openCustomSnackBar, setOpenCustomSnackBar] = useState(false);
+
   const handleSubmit = async (values: any) => {
     try {
-      await fetch("/api/authentication", {
+      const res = await fetch("/api/authentication", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(values),
       });
-    } catch (error) {
-      console.log(error);
+      if (res.status === 400) {
+        setSeverity("error");
+        setAlertMessage("Email already in use.");
+        setOpenCustomSnackBar(true);
+      }
+      if (res.status === 200) {
+        setSeverity("success");
+        setAlertMessage("User created successfully");
+        setOpenCustomSnackBar(true);
+        // router.push("/login");
+      }
+    } catch (error: any) {
+      setSeverity("error");
+      setAlertMessage(error);
+      setOpenCustomSnackBar(true);
     }
   };
 
@@ -138,6 +157,12 @@ const Register = ({ title, subtitle, subtext }: registerType) => {
         </Box>
       </form>
       {subtitle}
+      <CustomSnackBar
+        open={openCustomSnackBar}
+        handleClose={() => setOpenCustomSnackBar(false)}
+        alertMessage={alertMessage}
+        severity={severity}
+      />
     </>
   );
 };
