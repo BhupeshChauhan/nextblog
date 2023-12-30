@@ -8,9 +8,7 @@ import Layout from "../src/layouts";
 export default function Home() {
   return (
     <PageContainer title="Dashboard" description="this is Dashboard">
-      <Box>
-        Landing Page
-      </Box>
+      <Box>Landing Page</Box>
     </PageContainer>
   );
 }
