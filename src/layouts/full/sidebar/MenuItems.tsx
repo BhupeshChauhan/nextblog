@@ -1,68 +1,95 @@
 import {
-  IconAperture, IconCopy, IconLayoutDashboard, IconLogin, IconMoodHappy, IconTypography, IconUserPlus
-} from '@tabler/icons-react';
+  IconAperture,
+  IconCopy,
+  IconLayoutDashboard,
+  IconLogin,
+  IconMoodHappy,
+  IconTypography,
+  IconUserPlus,
+} from "@tabler/icons-react";
 
-import { uniqueId } from 'lodash';
+import { uniqueId } from "lodash";
 
 const Menuitems = [
   {
     navlabel: true,
-    subheader: 'Home',
+    subheader: "Home",
   },
 
   {
     id: uniqueId(),
-    title: 'Dashboard',
+    title: "Dashboard",
     icon: IconLayoutDashboard,
-    href: '/',
+    href: "/",
+    path: "dashboard",
   },
   {
     navlabel: true,
-    subheader: 'Utilities',
+    subheader: "Blog",
   },
   {
     id: uniqueId(),
-    title: 'Typography',
+    title: "Posts",
     icon: IconTypography,
-    href: '/utilities/typography',
+    href: "/posts/list",
+    path: "posts",
   },
   {
     id: uniqueId(),
-    title: 'Shadow',
+    title: "Categories",
     icon: IconCopy,
-    href: '/utilities/shadow',
-  },
-  {
-    navlabel: true,
-    subheader: 'Auth',
+    href: "/categories/list",
+    path: "categories",
   },
   {
     id: uniqueId(),
-    title: 'Login',
+    title: "Tags",
+    icon: IconCopy,
+    href: "/tags/list",
+    path: "tags",
+  },
+  {
+    navlabel: true,
+    subheader: "Galery",
+  },
+  {
+    id: uniqueId(),
+    title: "Images",
+    icon: IconTypography,
+    href: "/galery/images/list",
+    path: "images",
+  },
+  {
+    navlabel: true,
+    subheader: "Auth",
+  },
+  {
+    id: uniqueId(),
+    title: "Login",
     icon: IconLogin,
-    href: '/authentication/login',
+    href: "/authentication/login",
   },
   {
     id: uniqueId(),
-    title: 'Register',
+    title: "Register",
     icon: IconUserPlus,
-    href: '/authentication/register',
+    href: "/authentication/register",
   },
   {
     navlabel: true,
-    subheader: 'Extra',
+    subheader: "Extra",
   },
   {
     id: uniqueId(),
-    title: 'Icons',
+    title: "Icons",
     icon: IconMoodHappy,
-    href: '/icons',
+    href: "/icons",
   },
   {
     id: uniqueId(),
-    title: 'Sample Page',
+    title: "Sample Page",
     icon: IconAperture,
-    href: '/sample-page',
+    href: "/sample-page",
   },
 ];
 

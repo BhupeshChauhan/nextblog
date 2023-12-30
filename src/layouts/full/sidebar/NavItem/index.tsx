@@ -67,7 +67,11 @@ const NavItem = ({ item, level, pathDirect, onClick }: ItemType) => {
           component={Link}
           href={item.href}
           disabled={item.disabled}
-          selected={pathDirect === item.href}
+          selected={
+            pathDirect !== "/"
+              ? pathDirect.includes(item.path)
+              : item.path === "dashboard"
+          }
           target={item.external ? "_blank" : ""}
           onClick={onClick}
         >
