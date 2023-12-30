@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import { Button } from "@mui/material";
 import PageContainer from "../../../src/components/container/PageContainer";
-import FullLayout from "../../../src/layouts/full/FullLayout";
+import Layout from "../../../src/layouts";
 import { GridColDef } from "@mui/x-data-grid";
 import CustomDataGrid from "../../../src/components/CustomDataGrid";
 import Link from "next/link";
@@ -66,5 +66,5 @@ const CategoriesList = () => {
 
 export default CategoriesList;
 CategoriesList.getLayout = function getLayout(page: ReactElement) {
-  return <FullLayout>{page}</FullLayout>;
+  return <Layout type="Full">{page}</Layout>;
 };

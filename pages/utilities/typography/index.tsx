@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import FullLayout from "../../../src/layouts/full/FullLayout";
+import Layout from "../../../src/layouts";
 import { Typography, Grid, CardContent } from "@mui/material";
 import PageContainer from "../../../src/components/container/PageContainer";
 import DashboardCard from "../../../src/components/shared/DashboardCard";
@@ -304,5 +304,5 @@ const TypographyPage = () => {
 
 export default TypographyPage;
 TypographyPage.getLayout = function getLayout(page: ReactElement) {
-  return <FullLayout>{page}</FullLayout>;
+  return <Layout type="Full">{page}</Layout>;
 };

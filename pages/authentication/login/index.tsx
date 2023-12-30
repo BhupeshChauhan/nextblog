@@ -1,14 +1,24 @@
 import Link from "next/link";
-import type { ReactElement } from "react";
+import { useEffect, type ReactElement } from "react";
 import { Grid, Box, Card, Stack, Typography } from "@mui/material";
-import BlankLayout from "../../../src/layouts/blank/BlankLayout";
 
 // components
 import PageContainer from "../../../src/components/container/PageContainer";
 import Logo from "../../../src/layouts/full/shared/logo/Logo";
 import Login from "../../../src/UIComponents/Authentication/Login";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import Layout from "../../../src/layouts";
 
 const Login2 = () => {
+  const { data: session, status, update } = useSession();
+  const route = useRouter();
+  useEffect(() => {
+    if (status === "authenticated") {
+      route.replace("/");
+    }
+  }, [status, route]);
+
   return (
     <PageContainer title="Login" description="this is Login page">
       <Box
@@ -98,5 +108,5 @@ const Login2 = () => {
 export default Login2;
 
 Login2.getLayout = function getLayout(page: ReactElement) {
-  return <BlankLayout>{page}</BlankLayout>;
+  return <Layout type="Blank">{page}</Layout>;
 };

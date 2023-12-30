@@ -3,7 +3,7 @@ import type { ReactElement } from "react";
 import { Button, ImageList, ImageListItem, Typography } from "@mui/material";
 import PageContainer from "../../../../src/components/container/PageContainer";
 import DashboardCard from "../../../../src/components/shared/DashboardCard";
-import FullLayout from "../../../../src/layouts/full/FullLayout";
+import Layout from "../../../../src/layouts";
 import Link from "next/link";
 
 const imagesArray = [
@@ -91,5 +91,5 @@ const ImagesList = () => {
 
 export default ImagesList;
 ImagesList.getLayout = function getLayout(page: ReactElement) {
-  return <FullLayout>{page}</FullLayout>;
+  return <Layout type="Full">{page}</Layout>;
 };

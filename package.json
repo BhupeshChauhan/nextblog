@@ -51,6 +51,7 @@
     "mongoose": "^8.0.3",
     "mui-tiptap": "^1.8.6",
     "next": "latest",
+    "next-auth": "^4.24.5",
     "react": "latest",
     "react-apexcharts": "^1.4.0",
     "react-dom": "latest",

@@ -3,7 +3,7 @@ import { Paper, Box, Grid } from "@mui/material";
 import PageContainer from "../../../src/components/container/PageContainer";
 import DashboardCard from "../../../src/components/shared/DashboardCard";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import FullLayout from "../../../src/layouts/full/FullLayout";
+import Layout from "../../../src/layouts";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body1,
@@ -50,5 +50,5 @@ const Shadow = () => {
 
 export default Shadow;
 Shadow.getLayout = function getLayout(page: ReactElement) {
-  return <FullLayout>{page}</FullLayout>;
+  return <Layout type="Full">{page}</Layout>;
 };

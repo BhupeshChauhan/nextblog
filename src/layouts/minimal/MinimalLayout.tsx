@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { styled, Container, Box } from "@mui/material";
-
-import Header from "../full/header/Header";
-import Sidebar from "../full/sidebar/Sidebar";
+import Sidebar from "./sidebar/Sidebar";
+import Header from "./header/Header";
 
 const MainWrapper = styled("div")(() => ({
   display: "flex",
@@ -19,9 +18,9 @@ const PageWrapper = styled("div")(() => ({
   backgroundColor: "transparent",
 }));
 
-const FullLayout = ({ children }: any) => {
-  const [isSidebarOpen, setSidebarOpen] = useState(true);
-  const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+const MinimalLayout = ({ children }: any) => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  console.log('here')
   return (
     <MainWrapper className="mainwrapper">
       <>
@@ -30,8 +29,7 @@ const FullLayout = ({ children }: any) => {
         {/* ------------------------------------------- */}
         <Sidebar
           isSidebarOpen={isSidebarOpen}
-          isMobileSidebarOpen={isMobileSidebarOpen}
-          onSidebarClose={() => setMobileSidebarOpen(false)}
+          onSidebarClose={() => setSidebarOpen(false)}
         />
         {/* ------------------------------------------- */}
         {/* Main Wrapper */}
@@ -40,7 +38,7 @@ const FullLayout = ({ children }: any) => {
           {/* ------------------------------------------- */}
           {/* Header */}
           {/* ------------------------------------------- */}
-          <Header toggleMobileSidebar={() => setMobileSidebarOpen(true)} />
+          <Header toggleMobileSidebar={() => setSidebarOpen(true)} />
           {/* ------------------------------------------- */}
           {/* PageContent */}
           {/* ------------------------------------------- */}
@@ -64,4 +62,4 @@ const FullLayout = ({ children }: any) => {
   );
 };
 
-export default FullLayout;
+export default MinimalLayout;
