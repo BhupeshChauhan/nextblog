@@ -21,7 +21,9 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/api/authentication/index.ts",
-    "pages/api/auth/[...nextauth]"
+    "pages/api/auth/[...nextauth]",
+    "pages/api/user/fetchAllUser",
+    "pages/api/posts/fetchPostByTitle"
   ],
   "exclude": ["node_modules"]
 }

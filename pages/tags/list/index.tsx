@@ -1,10 +1,12 @@
-import type { ReactElement } from "react";
+import { useEffect, type ReactElement } from "react";
 import { Button } from "@mui/material";
 import PageContainer from "../../../src/components/container/PageContainer";
 import Layout from "../../../src/layouts";
 import CustomDataGrid from "../../../src/components/CustomDataGrid";
 import Link from "next/link";
 import { GridColDef } from "@mui/x-data-grid";
+import useApi from "../../../src/Hooks/useApi";
+import CustomCircularProgress from "../../../src/components/CustomCircularProgress";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID" },
@@ -43,8 +45,19 @@ const rows = [
 ];
 
 const TagsList = () => {
+  const { isLoading, isError, response, apiCall, resetValues }: any = useApi();
+
+  const fetchAllTags = async () => {
+    await apiCall([], "/api/tags/fetchAllTags", "POST");
+  };
+
+  useEffect(() => {
+    fetchAllTags();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <PageContainer title="Sample Page" description="this is Sample page">
+      {isLoading ? <CustomCircularProgress color="inherit" /> : <></>}
       <CustomDataGrid
         title="Tags List"
         // subtitle="All listed Blogs"
@@ -54,7 +67,7 @@ const TagsList = () => {
           </Link>
         }
         columns={columns}
-        rows={rows}
+        rows={response?.data ? response?.data : []}
         pageSize={10}
         pageSizeOptions={[10, 25, 50, 100]}
         disableRowSelectionOnClick={true}

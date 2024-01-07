@@ -4,21 +4,63 @@ import Layout from "../../../src/layouts";
 import CustomDynamicForm from "../../../src/components/CustomDynamicForm";
 import Link from "next/link";
 import { Button } from "@mui/material";
+import * as Yup from "yup";
+import CustomCircularProgress from "../../../src/components/CustomCircularProgress";
+import useApi from "../../../src/Hooks/useApi";
+import { useRouter } from "next/router";
 
 const formArray = [
   {
-    label: "Post Details",
-    formInputType: "section",
-    xs: 12,
-    sm: 12,
-    lg: 12,
-    xl: 12,
+    id: "name",
+    name: "name",
+    label: "Name",
+    placeholder: "Enter Name",
+    required: true,
+    disabled: false,
+    formInputType: "input",
+    type: null,
+    InputProps: null,
+    variant: "outlined",
+    autoComplete: null,
+    size: "sm",
+    margin: "none",
+    fullWidth: true,
+    multiLine: false,
+    maxRows: null,
+    rows: null,
+    xs: 6,
+    sm: 6,
+    lg: 6,
+    xl: 6,
   },
   {
-    id: "title",
-    name: "title",
-    label: "Post Title",
-    placeholder: "Enter Post Title",
+    id: "slug",
+    name: "slug",
+    label: "Slug",
+    placeholder: "Enter Slug",
+    required: true,
+    disabled: false,
+    formInputType: "input",
+    type: null,
+    InputProps: null,
+    variant: "outlined",
+    autoComplete: null,
+    size: "sm",
+    margin: "none",
+    fullWidth: true,
+    multiLine: false,
+    maxRows: null,
+    rows: null,
+    xs: 6,
+    sm: 6,
+    lg: 6,
+    xl: 6,
+  },
+  {
+    id: "description",
+    name: "description",
+    label: "Description",
+    placeholder: "Enter Description",
     required: true,
     disabled: false,
     formInputType: "input",
@@ -39,22 +81,31 @@ const formArray = [
   },
 ];
 const initialValues = {
-  title: "",
-  content: "<p>Enter Post Content 👋</p>",
-  categories: [],
-  tags: [],
+  name: "",
+  slug: "",
+  description: "",
 };
 
 const TagsAdd = () => {
-  const onAddTags = (values: any) => {
-    const payload = {
-      ...values,
-      publishDate: new Date(),
-    };
-    console.log(payload);
+  const { isLoading, isError, response, apiCall, resetValues } = useApi();
+  const router = useRouter();
+
+  const onAddtags = async (values: any) => {
+    const res = await apiCall(values, "/api/tags", "POST");
+    if (res.status === 200) {
+      router.push("/tags/list");
+    }
   };
+
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Name is required"),
+    slug: Yup.string().required("Slug is required"),
+    description: Yup.string().required("Description is required"),
+  });
+
   return (
     <PageContainer title="Sample Page" description="this is Sample page">
+      {isLoading ? <CustomCircularProgress color="inherit" /> : <></>}
       <CustomDynamicForm
         title="Tags Posts"
         // subtitle="All listed Blogs"
@@ -65,7 +116,8 @@ const TagsAdd = () => {
         }
         formArray={formArray}
         initialValues={initialValues}
-        onSubmit={onAddTags}
+        onSubmit={onAddtags}
+        validationSchema={validationSchema}
         isClear={true}
       />
     </PageContainer>

@@ -7,6 +7,7 @@ interface props {
   handleClose?: any;
   alertMessage?: any;
   severity?: any;
+  anchorOrigin?: any;
 }
 const CustomSnackBar = ({
   open,
@@ -14,12 +15,21 @@ const CustomSnackBar = ({
   handleClose,
   alertMessage,
   severity,
+  anchorOrigin,
 }: props) => {
   return (
     <Snackbar
       open={open}
       autoHideDuration={autoHideDuration ? autoHideDuration : 1000}
       onClose={handleClose}
+      anchorOrigin={
+        anchorOrigin
+          ? anchorOrigin
+          : {
+              vertical: "bottom",
+              horizontal: "left",
+            }
+      }
     >
       <Alert
         onClose={handleClose}

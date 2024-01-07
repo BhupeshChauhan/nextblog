@@ -6,11 +6,12 @@ import { FilterQuery, SortOrder } from "mongoose";
 import { connectToDB } from "../mongoose";
 import User from "../models/user.model";
 import { NextResponse } from "next/server";
+import { uniqueId } from "lodash";
 
 export async function createUser(req: any, res: any) {
   try {
     connectToDB();
-    const { name, email, password } = await req.body;
+    const { name, email, password, role } = await req.body;
 
     const encryptedPassword = CryptoJS.AES.encrypt(
       password,
@@ -20,34 +21,58 @@ export async function createUser(req: any, res: any) {
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
-      return res.status(400).json({ message: "Email already in use" });
+      return res
+        .status(400)
+        .json({ message: "Email already in use", status: 400 });
     }
 
+    const UserData = await User.find();
+
     const newUser = new User({
+      id: UserData.length + 1,
       name,
       email,
       password: encryptedPassword,
+      role,
     });
 
     await newUser.save();
-    return res.status(200).json({ message: "Success ADDED" });
+    return res.status(200).json({ message: "Success ADDED", status: 200 });
   } catch (error) {
     console.error("Error:", error);
 
-    return res.status(500).json({ message: "Internal Server Error" });
+    return res
+      .status(500)
+      .json({ message: "Internal Server Error", status: 500 });
   }
 }
 
 export async function fetchUser(req: any, res: any) {
   try {
     connectToDB();
+    const UserData = await User.find();
 
-    // return await User.findOne({ id: userId }).populate({
-    //   path: "communities",
-    //   model: Community,
-    // });
+    return res
+      .status(200)
+      .json({ data: UserData, message: "SuccessFully Fetched", status: 200 });
   } catch (error: any) {
-    throw new Error(`Failed to fetch user: ${error.message}`);
+    console.error("Error:", error);
+
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
+}
+
+export async function fetchUserByEmail(req: any, res: any) {
+  const { email } = await req.body;
+  try {
+    connectToDB();
+    const UserData = await User.findOne({ email });
+
+    return res.status(200).json({ data: UserData, message: "User Exists" });
+  } catch (error: any) {
+    console.error("Error:", error);
+
+    return res.status(500).json({ message: "Internal Server Error" });
   }
 }
 

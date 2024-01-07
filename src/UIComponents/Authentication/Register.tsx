@@ -1,12 +1,10 @@
-import React, { useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
-
 import CustomTextField from "../../../src/components/forms/theme-elements/CustomTextField";
 import { Stack } from "@mui/system";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import CustomSnackBar from "../../components/CustomSnackBar";
 import { useRouter } from "next/router";
+import useApi from "../../Hooks/useApi";
 
 interface registerType {
   title?: string;
@@ -16,34 +14,15 @@ interface registerType {
 
 const Register = ({ title, subtitle, subtext }: registerType) => {
   const router = useRouter();
-  const [alertMessage, setAlertMessage] = useState("");
-  const [severity, setSeverity] = useState("");
-  const [openCustomSnackBar, setOpenCustomSnackBar] = useState(false);
-
+  const { isLoading, isError, response, apiCall } = useApi();
   const handleSubmit = async (values: any) => {
-    try {
-      const res = await fetch("/api/authentication", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
-      if (res.status === 400) {
-        setSeverity("error");
-        setAlertMessage("Email already in use.");
-        setOpenCustomSnackBar(true);
-      }
-      if (res.status === 200) {
-        setSeverity("success");
-        setAlertMessage("User created successfully");
-        setOpenCustomSnackBar(true);
-        // router.push("/login");
-      }
-    } catch (error: any) {
-      setSeverity("error");
-      setAlertMessage(error);
-      setOpenCustomSnackBar(true);
+    const res = await apiCall(
+      { ...values, role: "user" },
+      "/api/authentication",
+      "POST",
+    );
+    if (res.status === 200) {
+      router.push("/login");
     }
   };
 
@@ -157,12 +136,6 @@ const Register = ({ title, subtitle, subtext }: registerType) => {
         </Box>
       </form>
       {subtitle}
-      <CustomSnackBar
-        open={openCustomSnackBar}
-        handleClose={() => setOpenCustomSnackBar(false)}
-        alertMessage={alertMessage}
-        severity={severity}
-      />
     </>
   );
 };

@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button[class*='MuiButton-containedPrimary'] {
+    background-color: #0081cb!important;
+    }
