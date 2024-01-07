@@ -26,7 +26,6 @@ const Login = ({ title, subtitle, subtext }: loginType) => {
   const route = useRouter();
   const handleSubmit = async (values: any) => {
     try {
-      console.log("here");
       const res = await signIn("credentials", {
         redirect: false,
         ...values,
@@ -34,7 +33,6 @@ const Login = ({ title, subtitle, subtext }: loginType) => {
       if (res?.status === 200) {
         route.replace("/");
       }
-      console.log(res, "here");
     } catch (error: any) {
       //
     }

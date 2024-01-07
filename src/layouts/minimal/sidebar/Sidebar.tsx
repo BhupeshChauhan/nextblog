@@ -1,7 +1,7 @@
 import { Box, Drawer } from "@mui/material";
 
 import SidebarItems from "./SidebarItems";
-import Logo from "../../full/shared/logo/Logo";
+import Logo from "../shared/logo/Logo";
 
 interface ItemType {
   isSidebarOpen: boolean;

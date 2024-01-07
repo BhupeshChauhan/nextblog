@@ -97,11 +97,11 @@ const FormComponent: React.FC<IFormComponent> = ({
                     onBlur={formik.handleBlur}
                     error={
                       formik.touched[element.name] &&
-                      Boolean(formik.values[element.name])
+                      Boolean(formik.errors[element.name])
                     }
                     helperText={
                       formik.touched[element.name] &&
-                      formik.values[element.name]
+                      formik.errors[element.name]
                     }
                     id={element?.id}
                     name={element?.name}
@@ -147,6 +147,14 @@ const FormComponent: React.FC<IFormComponent> = ({
                     name={element?.name}
                     multiple={element?.multiple}
                     placeholder={element?.placeholder}
+                    error={
+                      formik.touched[element.name] &&
+                      Boolean(formik.errors[element.name])
+                    }
+                    helperText={
+                      formik.touched[element.name] &&
+                      formik.errors[element.name]
+                    }
                   />
                 </>
               ) : null}

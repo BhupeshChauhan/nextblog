@@ -12,11 +12,13 @@ import {
 } from "@mui/material";
 
 import { IconListCheck, IconMail, IconUser } from "@tabler/icons-react";
-import { signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
 const Profile = () => {
   const [anchorEl2, setAnchorEl2] = useState(null);
+  const { data: session, status, update } = useSession();
+  console.log(session);
   const handleClick2 = (event: any) => {
     setAnchorEl2(event.currentTarget);
   };
@@ -27,7 +29,7 @@ const Profile = () => {
 
   const handleLogOut = async () => {
     await signOut({ redirect: false, callbackUrl: "/" });
-    route.replace("/authentication/login");
+    route.replace("/");
   };
 
   return (
@@ -96,12 +98,7 @@ const Profile = () => {
           <ListItemText>My Tasks</ListItemText>
         </MenuItem>
         <Box mt={1} py={1} px={2}>
-          <Button
-            href="/authentication/login"
-            variant="outlined"
-            color="primary"
-            onClick={handleLogOut}
-          >
+          <Button variant="outlined" color="primary" onClick={handleLogOut}>
             Logout
           </Button>
         </Box>

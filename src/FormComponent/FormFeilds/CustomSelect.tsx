@@ -1,6 +1,6 @@
 import {
   FormControl,
-  InputLabel,
+  FormHelperText,
   MenuItem,
   OutlinedInput,
   Select,
@@ -15,6 +15,8 @@ type Props = {
   name?: any;
   multiple?: any;
   placeholder?: any;
+  error?: any;
+  helperText?: any;
 };
 
 const CustomSelect = ({
@@ -25,6 +27,8 @@ const CustomSelect = ({
   name,
   multiple,
   placeholder,
+  error,
+  helperText,
 }: Props) => {
   const onChange = (event: any) => {
     const {
@@ -37,7 +41,7 @@ const CustomSelect = ({
     }
   };
   return (
-    <FormControl fullWidth={fullWidth}>
+    <FormControl fullWidth={fullWidth} error={error}>
       <Select
         id="demo-simple-select"
         value={value}
@@ -64,12 +68,13 @@ const CustomSelect = ({
         <MenuItem disabled value="">
           <em>{placeholder}</em>
         </MenuItem>
-        {menuArray.map((element: any, index: any) => (
-          <MenuItem key={index} value={element.value}>
-            {element.label}
+        {menuArray?.map((element: any, index: any) => (
+          <MenuItem key={index} value={element.name}>
+            {element.name}
           </MenuItem>
         ))}
       </Select>
+      {error ? <FormHelperText> {helperText}</FormHelperText> : null}
     </FormControl>
   );
 };

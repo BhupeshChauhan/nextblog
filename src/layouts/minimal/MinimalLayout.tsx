@@ -20,7 +20,7 @@ const PageWrapper = styled("div")(() => ({
 
 const MinimalLayout = ({ children }: any) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  console.log("here");
+
   return (
     <MainWrapper className="mainwrapper">
       <>

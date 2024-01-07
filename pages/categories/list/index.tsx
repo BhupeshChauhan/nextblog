@@ -1,10 +1,12 @@
-import type { ReactElement } from "react";
+import { useEffect, type ReactElement } from "react";
 import { Button } from "@mui/material";
 import PageContainer from "../../../src/components/container/PageContainer";
 import Layout from "../../../src/layouts";
 import { GridColDef } from "@mui/x-data-grid";
 import CustomDataGrid from "../../../src/components/CustomDataGrid";
 import Link from "next/link";
+import useApi from "../../../src/Hooks/useApi";
+import CustomCircularProgress from "../../../src/components/CustomCircularProgress";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID" },
@@ -30,31 +32,31 @@ const columns: GridColDef[] = [
   },
 ];
 
-const rows = [
-  {
-    id: 1,
-    name: "Technology",
-    slug: "technology",
-    description: "Articles related to technology and gadgets.",
-    parentCategoryId: null, // No parent category
-    createdAt: new Date("2023-01-01T08:00:00Z"),
-    updatedAt: new Date("2023-01-01T08:00:00Z"),
-  },
-];
-
 const CategoriesList = () => {
+  const { isLoading, isError, response, apiCall, resetValues }: any = useApi();
+
+  const fetchAllCategories = async () => {
+    await apiCall([], "/api/categories/fetchAllCategories", "POST");
+  };
+
+  useEffect(() => {
+    fetchAllCategories();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <PageContainer title="Sample Page" description="this is Sample page">
+      {isLoading ? <CustomCircularProgress color="inherit" /> : <></>}
       <CustomDataGrid
         title="Category List"
         // subtitle="All listed Blogs"
         action={
           <Link href={"/categories/add"}>
-            <Button variant="outlined">Create Post</Button>
+            <Button variant="outlined">Create Category</Button>
           </Link>
         }
         columns={columns}
-        rows={rows}
+        rows={response?.data ? response?.data : []}
         pageSize={10}
         pageSizeOptions={[10, 25, 50, 100]}
         disableRowSelectionOnClick={true}

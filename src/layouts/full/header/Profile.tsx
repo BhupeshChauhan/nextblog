@@ -27,7 +27,7 @@ const Profile = () => {
 
   const handleLogOut = async () => {
     await signOut({ redirect: false, callbackUrl: "/" });
-    route.replace("/authentication/login");
+    route.replace("/");
   };
 
   return (
@@ -96,12 +96,7 @@ const Profile = () => {
           <ListItemText>My Tasks</ListItemText>
         </MenuItem>
         <Box mt={1} py={1} px={2}>
-          <Button
-            href="/authentication/login"
-            variant="outlined"
-            color="primary"
-            onClick={handleLogOut}
-          >
+          <Button variant="outlined" color="primary" onClick={handleLogOut}>
             Logout
           </Button>
         </Box>
